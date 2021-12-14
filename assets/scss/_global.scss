@@ -14,14 +14,14 @@ body,
 button,
 input,
 textarea {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+  font-family: $body-font;
+  font-size: $normal-font-size;
 }
 
 body {
-  margin: var(--header-height) 0 0 0;
-  background-color: var(--body-color);
-  color: var(--text-color);
+  margin: $header-height 0 0 0;
+  background-color: $body-color;
+  color: $text-color;
   transition: 0.4s; /*For animation dark mode*/
 }
 
@@ -34,8 +34,8 @@ button {
 h1,
 h2,
 h3 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  color: $title-color;
+  font-weight: $font-semi-bold;
 }
 
 ul {
@@ -58,20 +58,20 @@ img {
 }
 
 .section__title,
-.section__title-center {
-  font-size: var(--h2-font-size);
-  margin-bottom: var(--mb-2);
+.section__title--center {
+  font-size: $h2-font-size;
+  margin-bottom: $mb-2;
   line-height: 140%;
 }
 
-.section__title-center {
+.section__title--center {
   text-align: center;
 }
 
 .container {
   max-width: 968px;
-  margin-left: var(--mb-1-5);
-  margin-right: var(--mb-1-5);
+  margin-left: $mb-1-5;
+  margin-right: $mb-1-5;
 }
 
 .grid {
