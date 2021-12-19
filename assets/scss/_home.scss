@@ -1,1 +1,67 @@
 /*=============== HOME ===============*/
+.home {
+  padding: 3.5rem 0 2rem;
+
+  &__container {
+    position: relative;
+    row-gap: 2rem;
+  }
+
+  &__img {
+    width: 200px;
+    justify-self: center;
+  }
+
+  &__title {
+    font-size: $big-font-size;
+    line-height: 140%;
+    margin-bottom: $mb-1;
+  }
+
+  &__description {
+    margin-bottom: $mb-2-5;
+  }
+
+  &__social {
+    position: absolute;
+    top: 2rem;
+    right: -1rem;
+    display: grid;
+    justify-items: center;
+    row-gap: 3.5rem;
+
+    &--follow {
+      font-weight: $font-medium;
+      font-size: $small-font-size;
+      color: $first-color;
+      position: relative;
+      transform: rotate(90deg);
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 2px;
+        background-color: $first-color;
+        right: -45%;
+        top: 50%;
+      }
+    }
+
+    &--links {
+      display: inline-flex;
+      flex-direction: column;
+      row-gap: 0.25rem;
+    }
+
+    &--link {
+      font-size: 1rem;
+      color: $first-color;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+  }
+}

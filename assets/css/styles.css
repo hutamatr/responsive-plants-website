@@ -13,7 +13,8 @@
 /* Responsive typography */
 /*=============== BASE ===============*/
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -34,6 +35,7 @@ body {
   margin: 3.5rem 0 0 0;
   background-color: white;
   color: #565d59;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   /*For animation dark mode*/
 }
@@ -114,9 +116,15 @@ the website, in dark theme
 /*=============== NAV ===============*/
 .nav {
   height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .nav__logo, .nav__togle, .nav__close {
   color: #252826;
@@ -125,9 +133,16 @@ the website, in dark theme
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -1px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  column-gap: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .nav__logo:hover {
@@ -138,6 +153,8 @@ the website, in dark theme
   color: #3e6553;
 }
 .nav__toggle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 1.25rem;
   cursor: pointer;
@@ -150,9 +167,11 @@ the website, in dark theme
     height: 100%;
     top: 0;
     right: -100%;
-    box-shadow: -2px 0 4px rgba(29, 47, 39, 0.1);
+    -webkit-box-shadow: -2px 0 4px rgba(29, 47, 39, 0.1);
+            box-shadow: -2px 0 4px rgba(29, 47, 39, 0.1);
     padding: 4rem 0 0 5rem;
     border-radius: 1rem 0 0 1rem;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     z-index: 100;
   }
@@ -165,17 +184,31 @@ the website, in dark theme
   cursor: pointer;
 }
 .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   row-gap: 1.5rem;
 }
 .nav__link {
   color: #252826;
   font-weight: 500;
-  transition: 0.3s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .nav__link:hover {
   color: #3e6553;
+}
+.nav__item {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.nav__item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 /* Show menu */
@@ -186,7 +219,105 @@ the website, in dark theme
 /* Change background header */
 /* Active link */
 /*=============== HOME ===============*/
+.home {
+  padding: 3.5rem 0 2rem;
+}
+.home__container {
+  position: relative;
+  row-gap: 2rem;
+}
+.home__img {
+  width: 200px;
+  justify-self: center;
+}
+.home__title {
+  font-size: 2rem;
+  line-height: 140%;
+  margin-bottom: 1rem;
+}
+.home__description {
+  margin-bottom: 2.5rem;
+}
+.home__social {
+  position: absolute;
+  top: 2rem;
+  right: -1rem;
+  display: grid;
+  justify-items: center;
+  row-gap: 3.5rem;
+}
+.home__social--follow {
+  font-weight: 500;
+  font-size: 0.813rem;
+  color: #3e6553;
+  position: relative;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.home__social--follow::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 2px;
+  background-color: #3e6553;
+  right: -45%;
+  top: 50%;
+}
+.home__social--links {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.25rem;
+}
+.home__social--link {
+  font-size: 1rem;
+  color: #3e6553;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.home__social--link:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
 /*=============== BUTTONS ===============*/
+.button {
+  display: inline-block;
+  background-color: #3e6553;
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.button:hover {
+  background-color: #365949;
+}
+.button:hover .button__icon {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.button__icon {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.button--flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
 /*=============== ABOUT ===============*/
 /*=============== STEPS ===============*/
 /*=============== PRODUCTS ===============*/

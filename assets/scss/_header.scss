@@ -80,17 +80,20 @@
   &__link {
     color: $title-color;
     font-weight: $font-medium;
-    transition: 0.3s;
+    transition: 0.4s;
 
     &:hover {
       color: $first-color;
     }
   }
 
-  // &__item {
-  //   display: flex;
-  //   justify-content: center;
-  // }
+  &__item {
+    transition: 0.4s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 /* Show menu */
 

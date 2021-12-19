@@ -1,1 +1,29 @@
 /*=============== BUTTONS ===============*/
+
+.button {
+  display: inline-block;
+  background-color: $first-color;
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: $font-medium;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: $first-color-alt;
+
+    & .button__icon {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__icon {
+    transition: 0.4s;
+  }
+
+  &--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+}
