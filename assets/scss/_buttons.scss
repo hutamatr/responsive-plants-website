@@ -26,4 +26,13 @@
     align-items: center;
     column-gap: 0.5rem;
   }
+
+  &--link {
+    color: $first-color;
+    font-weight: $font-medium;
+
+    &:hover .button__icon {
+      transform: rotate(-45deg);
+    }
+  }
 }

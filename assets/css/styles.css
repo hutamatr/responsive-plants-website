@@ -216,7 +216,12 @@ the website, in dark theme
   right: 0;
 }
 
-/* Change background header */
+/* Change scroll header shadow */
+.scroll-header {
+  -webkit-box-shadow: 0 1px 4px rgba(37, 40, 38, 0.1);
+          box-shadow: 0 1px 4px rgba(37, 40, 38, 0.1);
+}
+
 /* Active link */
 /*=============== HOME ===============*/
 .home {
@@ -317,8 +322,49 @@ the website, in dark theme
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem;
 }
+.button--link {
+  color: #3e6553;
+  font-weight: 500;
+}
+.button--link:hover .button__icon {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
 
 /*=============== ABOUT ===============*/
+.about__container {
+  row-gap: 2rem;
+}
+.about__img {
+  width: 280px;
+  justify-self: center;
+}
+.about__title {
+  margin-bottom: 1rem;
+}
+.about__description {
+  margin-bottom: 2rem;
+}
+.about__details {
+  display: grid;
+  row-gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.about__details--description {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  font-size: 0.813rem;
+}
+.about__details--icon {
+  font-size: 1rem;
+  color: #3e6553;
+  margin-top: 0.15rem;
+}
+
 /*=============== STEPS ===============*/
 /*=============== PRODUCTS ===============*/
 /*=============== QUESTIONS ===============*/

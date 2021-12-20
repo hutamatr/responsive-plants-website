@@ -101,6 +101,10 @@
   right: 0;
 }
 
-/* Change background header */
+/* Change scroll header shadow */
+
+.scroll-header {
+  box-shadow: 0 1px 4px hsla($hue, 4%, 15%, 0.1);
+}
 
 /* Active link */
