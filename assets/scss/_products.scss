@@ -1,1 +1,65 @@
 /*=============== PRODUCTS ===============*/
+.product {
+  &__descroption {
+    text-align: center;
+  }
+
+  &__container {
+    padding: 3rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 3rem;
+  }
+
+  &__card {
+    display: grid;
+    position: relative;
+
+    &:hover .product__img {
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 120px;
+    justify-content: center;
+    margin-bottom: $mb-0-75;
+    transition: 0.4s;
+  }
+
+  &__title,
+  &__price {
+    font-size: $small-font-size;
+    font-weight: $font-semi-bold;
+    color: $title-color;
+  }
+
+  &__title {
+    margin-bottom: 0.25rem;
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $first-color;
+    color: #fff;
+    padding: 0.25rem;
+    border-radius: 0.35rem;
+    font-size: 1.15rem;
+
+    &:hover {
+      border-color: $first-color-alt;
+    }
+  }
+
+  &__circle {
+    width: 90px;
+    height: 90px;
+    background-color: $first-color-lighten;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+  }
+}

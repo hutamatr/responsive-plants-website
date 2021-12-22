@@ -6,7 +6,7 @@ const navMenu = document.getElementById('nav-menu'),
 
 //   Menu Show
 
-/* Validation if COntent Exist*/
+/* Validation if Content Exist*/
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
@@ -49,6 +49,33 @@ function scrollHeader() {
 
 window.addEventListener('scroll', scrollHeader);
 /*=============== QUESTIONS ACCORDION ===============*/
+const accordionItem = document.querySelectorAll('.questions__item');
+
+accordionItem.forEach((item) => {
+  const accordionHeader = item.querySelector('.questions__header');
+
+  accordionHeader.addEventListener('click', () => {
+    const openItem = document.querySelector('.accordion-open');
+    toggleItem(item);
+
+    if (openItem && openItem !== item) {
+      toggleItem(openItem);
+    }
+  });
+});
+
+const toggleItem = (item) => {
+  const accordionContent = item.querySelector('.questions__content');
+
+  if (item.classList.contains('accordion-open')) {
+    accordionContent.removeAttribute('style');
+    item.classList.remove('accordion-open');
+  } else {
+    accordionContent.style.height = accordionContent.scrollHeight + 'px';
+    // console.log(accordionContent.scrollHeight);
+    item.classList.add('accordion-open');
+  }
+};
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 

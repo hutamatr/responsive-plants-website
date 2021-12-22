@@ -1,3 +1,84 @@
 /*=============== QUESTIONS ===============*/
 
+.questions {
+  background-color: $first-color-lighten;
+
+  &__container {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
+  &__group {
+    display: grid;
+    row-gap: 1.5rem;
+  }
+  &__item {
+    background-color: $container-color;
+    border-radius: 0.25rem;
+
+    &:hover {
+      box-shadow: 0 2px 8px hsla($hue, 4%, 15%, 15%);
+    }
+
+    &--title {
+      font-size: $small-font-size;
+      font-weight: $font-medium;
+    }
+  }
+
+  &__icon {
+    font-size: 1.25rem;
+    color: $title-color;
+  }
+
+  &__description {
+    font-size: $smaller-font-size;
+    padding: 0 1.25rem 1.25rem 2.5rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    overflow: hidden;
+    height: 0;
+  }
+
+  &__content--toggle {
+    overflow: visible;
+    height: max-content;
+  }
+
+  &__item,
+  &__header,
+  &__item--title,
+  &__icon,
+  &__description,
+  &__content {
+    transition: 0.4s;
+  }
+}
+
 /*Rotate icon, change color of titles and background*/
+
+.accordion {
+  &-open .questions__header,
+  &-open .questions__content {
+    background-color: $first-color;
+  }
+
+  &-open .questions__item--title,
+  &-open .questions__description,
+  &-open .questions__icon {
+    color: #fff;
+  }
+
+  &-open .questions__icon {
+    transform: rotate(45deg);
+  }
+}

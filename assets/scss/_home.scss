@@ -57,10 +57,11 @@
     &--link {
       font-size: 1rem;
       color: $first-color;
-      transition: 0.3s;
+      transition: 0.4s;
 
       &:hover {
         transform: scale(1.25);
+        text-decoration: underline;
       }
     }
   }
