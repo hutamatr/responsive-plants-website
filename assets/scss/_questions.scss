@@ -42,16 +42,13 @@
     column-gap: 0.5rem;
     padding: 0.75rem 0.5rem;
     cursor: pointer;
+    border-radius: 0.25rem 0.25rem 0 0;
   }
 
   &__content {
     overflow: hidden;
     height: 0;
-  }
-
-  &__content--toggle {
-    overflow: visible;
-    height: max-content;
+    border-radius: 0 0 0.25rem 0.25rem;
   }
 
   &__item,
@@ -79,6 +76,6 @@
   }
 
   &-open .questions__icon {
-    transform: rotate(45deg);
+    transform: rotate(225deg);
   }
 }

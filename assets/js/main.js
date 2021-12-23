@@ -35,6 +35,7 @@ let linkAction = () => {
 };
 
 navLink.forEach((item) => item.addEventListener('click', linkAction));
+
 /*=============== ADD SCROLL HEADER SHADOW ===============*/
 
 function scrollHeader() {
@@ -48,7 +49,9 @@ function scrollHeader() {
 }
 
 window.addEventListener('scroll', scrollHeader);
+
 /*=============== QUESTIONS ACCORDION ===============*/
+
 const accordionItem = document.querySelectorAll('.questions__item');
 
 accordionItem.forEach((item) => {
@@ -78,6 +81,26 @@ const toggleItem = (item) => {
 };
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+
+const sections = document.querySelectorAll('section[id]');
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute('id');
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector(`.nav__menu a[href*=${sectionId}]`).classList.add('active--link');
+    } else {
+      document.querySelector(`.nav__menu a[href*=${sectionId}]`).classList.remove('active--link');
+    }
+  });
+}
+
+window.addEventListener('scroll', scrollActive);
 
 /*=============== SHOW SCROLL UP ===============*/
 

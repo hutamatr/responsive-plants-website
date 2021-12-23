@@ -1,1 +1,94 @@
 /*=============== FOOTER ===============*/
+.footer {
+  &__container {
+    row-gap: 3rem;
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: $title-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: $mb-2-5;
+    transition: 0.4s;
+
+    &--icon {
+      font-size: 1.15rem;
+      color: $first-color;
+    }
+
+    &:hover {
+      color: $first-color;
+    }
+  }
+
+  &__title {
+    font-size: $h3-font-size;
+    margin-bottom: $mb-1-5;
+  }
+
+  &__subscribe {
+    background-color: $first-color-lighten;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+  }
+
+  &__input {
+    width: 70%;
+    padding: 0 0.5rem;
+    background: none;
+    color: $text-color;
+    border: none;
+    outline: none;
+  }
+
+  &__button {
+    padding: 1rem;
+  }
+
+  &__data {
+    display: grid;
+    row-gap: 0.75rem;
+  }
+
+  &__information {
+    font-size: $small-font-size;
+  }
+
+  &__social {
+    display: inline-flex;
+    column-gap: 0.75rem;
+
+    &--link {
+      font-size: 1rem;
+      color: $text-color;
+      transition: 0.4s;
+
+      &:hover {
+        transform: translateY(-0.25rem);
+      }
+    }
+  }
+
+  &__cards {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+  }
+
+  &__card {
+    width: 35px;
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: $smaller-font-size;
+    color: $text-color-light;
+    margin: 5rem 0 1rem;
+  }
+}

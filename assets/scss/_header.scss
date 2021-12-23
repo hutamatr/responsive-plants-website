@@ -80,18 +80,9 @@
   &__link {
     color: $title-color;
     font-weight: $font-medium;
-    transition: 0.4s;
 
     &:hover {
       color: $first-color;
-    }
-  }
-
-  &__item {
-    transition: 0.4s;
-
-    &:hover {
-      transform: scale(1.05);
     }
   }
 }
@@ -108,3 +99,18 @@
 }
 
 /* Active link */
+
+.active--link {
+  position: relative;
+  color: $first-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: $first-color;
+  }
+}
