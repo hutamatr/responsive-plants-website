@@ -23,15 +23,15 @@
     position: relative;
     width: 120px;
     justify-content: center;
-    margin-bottom: $mb-0-75;
+    margin-bottom: var(--mb-0-75);
     transition: 0.4s;
   }
 
   &__title,
   &__price {
-    font-size: $small-font-size;
-    font-weight: $font-semi-bold;
-    color: $title-color;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
   }
 
   &__title {
@@ -42,21 +42,21 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    background-color: $first-color;
+    background-color: var(--first-color);
     color: #fff;
     padding: 0.25rem;
     border-radius: 0.35rem;
     font-size: 1.15rem;
 
     &:hover {
-      border-color: $first-color-alt;
+      border-color: var(--first-color-alt);
     }
   }
 
   &__circle {
     width: 90px;
     height: 90px;
-    background-color: $first-color-lighten;
+    background-color: var(--first-color-lighten);
     border-radius: 50%;
     position: absolute;
     top: 10%;

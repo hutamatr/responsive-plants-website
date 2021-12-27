@@ -1,7 +1,7 @@
 /*=============== STEPS ===============*/
 .steps {
   &__bg {
-    background-color: $first-color;
+    background-color: var(--first-color);
     padding: 3rem 2rem 2rem;
     border-radius: 1rem;
   }
@@ -16,28 +16,28 @@
   }
 
   &__card {
-    background-color: $container-color;
+    background-color: var(--container-color);
     padding: 2.5rem 3rem 2rem 1.5rem;
     border-radius: 1rem;
 
     &--number {
       display: inline-block;
-      background-color: $first-color-alt;
+      background-color: var(--first-color-alt);
       color: #fff;
       padding: 0.5rem 0.75rem;
       border-radius: 0.25rem;
-      font-size: $h2-font-size;
-      margin-bottom: $mb-1-5;
+      font-size: var(--h2-font-size);
+      margin-bottom: var(--mb-1-5);
       transition: 0.4s;
     }
 
     &--title {
-      font-size: $h3-font-size;
-      margin-bottom: $mb-0-5;
+      font-size: var(--h3-font-size);
+      margin-bottom: var(--mb-0-5);
     }
 
     &--description {
-      font-size: $small-font-size;
+      font-size: var(--small-font-size);
     }
 
     &:hover .steps__card--number {

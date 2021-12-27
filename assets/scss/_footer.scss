@@ -8,30 +8,30 @@
     display: inline-flex;
     align-items: center;
     column-gap: 0.5rem;
-    color: $title-color;
+    color: var(--title-color);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: -1px;
-    margin-bottom: $mb-2-5;
+    margin-bottom: var(--mb-2-5);
     transition: 0.4s;
 
     &--icon {
       font-size: 1.15rem;
-      color: $first-color;
+      color: var(--first-color);
     }
 
     &:hover {
-      color: $first-color;
+      color: var(--first-color);
     }
   }
 
   &__title {
-    font-size: $h3-font-size;
-    margin-bottom: $mb-1-5;
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1-5);
   }
 
   &__subscribe {
-    background-color: $first-color-lighten;
+    background-color: var(--first-color-lighten);
     padding: 0.75rem;
     display: flex;
     justify-content: space-between;
@@ -42,7 +42,7 @@
     width: 70%;
     padding: 0 0.5rem;
     background: none;
-    color: $text-color;
+    color: var(--text-color);
     border: none;
     outline: none;
   }
@@ -57,7 +57,7 @@
   }
 
   &__information {
-    font-size: $small-font-size;
+    font-size: var(--small-font-size);
   }
 
   &__social {
@@ -66,7 +66,7 @@
 
     &--link {
       font-size: 1rem;
-      color: $text-color;
+      color: var(--text-color);
       transition: 0.4s;
 
       &:hover {
@@ -87,8 +87,8 @@
 
   &__copy {
     text-align: center;
-    font-size: $smaller-font-size;
-    color: $text-color-light;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
     margin: 5rem 0 1rem;
   }
 }

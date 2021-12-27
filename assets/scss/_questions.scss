@@ -1,7 +1,7 @@
 /*=============== QUESTIONS ===============*/
 
 .questions {
-  background-color: $first-color-lighten;
+  background-color: var(--first-color-lighten);
 
   &__container {
     gap: 1.5rem;
@@ -13,26 +13,26 @@
     row-gap: 1.5rem;
   }
   &__item {
-    background-color: $container-color;
+    background-color: var(--container-color);
     border-radius: 0.25rem;
 
     &:hover {
-      box-shadow: 0 2px 8px hsla($hue, 4%, 15%, 15%);
+      box-shadow: 0 2px 8px hsla(var(--hue), 4%, 15%, 15%);
     }
 
     &--title {
-      font-size: $small-font-size;
-      font-weight: $font-medium;
+      font-size: var(--small-font-size);
+      font-weight: var(--font-medium);
     }
   }
 
   &__icon {
     font-size: 1.25rem;
-    color: $title-color;
+    color: var(--title-color);
   }
 
   &__description {
-    font-size: $smaller-font-size;
+    font-size: var(--smaller-font-size);
     padding: 0 1.25rem 1.25rem 2.5rem;
   }
 
@@ -66,7 +66,7 @@
 .accordion {
   &-open .questions__header,
   &-open .questions__content {
-    background-color: $first-color;
+    background-color: var(--first-color);
   }
 
   &-open .questions__item--title,

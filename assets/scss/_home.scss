@@ -13,13 +13,13 @@
   }
 
   &__title {
-    font-size: $big-font-size;
+    font-size: var(--big-font-size);
     line-height: 140%;
-    margin-bottom: $mb-1;
+    margin-bottom: var(--mb-1);
   }
 
   &__description {
-    margin-bottom: $mb-2-5;
+    margin-bottom: var(--mb-2-5);
   }
 
   &__social {
@@ -31,9 +31,9 @@
     row-gap: 3.5rem;
 
     &--follow {
-      font-weight: $font-medium;
-      font-size: $small-font-size;
-      color: $first-color;
+      font-weight: var(--font-medium);
+      font-size: var(--small-font-size);
+      color: var(--first-color);
       position: relative;
       transform: rotate(90deg);
 
@@ -42,7 +42,7 @@
         position: absolute;
         width: 1rem;
         height: 2px;
-        background-color: $first-color;
+        background-color: var(--first-color);
         right: -45%;
         top: 50%;
       }
@@ -56,7 +56,7 @@
 
     &--link {
       font-size: 1rem;
-      color: $first-color;
+      color: var(--first-color);
       transition: 0.4s;
 
       &:hover {
